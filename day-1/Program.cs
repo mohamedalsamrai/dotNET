@@ -1,17 +1,24 @@
-﻿namespace day_1;
+﻿// <copyright file="Program.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
+namespace Day_1;
+
+/// <summary>Entry point for the Day 1 program.</summary>
 internal static class Program
 {
+    /// <summary>Application entry point.</summary>
+    /// <param name="args">Command-line arguments.</param>
     private static void Main(string[] args)
     {
-        String? input = Console.ReadLine();
-        if (input != null&&!input.Equals(string.Empty))
+        string? input = Console.ReadLine();
+        if (input == null || input.Equals(string.Empty))
         {
-            string[] inputArray = input.Split(",");
+            Console.WriteLine("Nothing found");
         }
         else
         {
-            Console.WriteLine("Nothing found");
+            string[] inputArray = input.Split(",");
         }
     }
 }
