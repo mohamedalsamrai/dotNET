@@ -17,7 +17,18 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    public IActionResult Items()
+    {
+        return View();
+    }
+    public IActionResult CreatAndEdit()
+    {
+        return View();
+    }
+    public IActionResult CreatAndEditForm( Item modle)
+    {
+        return RedirectToAction("Index");
+    }
     public IActionResult Privacy()
     {
         return View();
