@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-2", "day-2\day-2.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-3", "day-3\day-3.csproj", "{AAD8F358-DB61-4A5C-83E8-570998AB222F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking-Api", "Booking-Api\Booking-Api.csproj", "{62FD0019-6667-4A61-B8AB-59DBA2C6CAE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{AAD8F358-DB61-4A5C-83E8-570998AB222F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAD8F358-DB61-4A5C-83E8-570998AB222F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAD8F358-DB61-4A5C-83E8-570998AB222F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62FD0019-6667-4A61-B8AB-59DBA2C6CAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FD0019-6667-4A61-B8AB-59DBA2C6CAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FD0019-6667-4A61-B8AB-59DBA2C6CAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FD0019-6667-4A61-B8AB-59DBA2C6CAE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
