@@ -8,24 +8,45 @@ namespace Booking_Api.Controllers
     {
         private readonly AppDbContext _contex = context;
         [HttpPost]
-        public JsonResult CrestEdite(HotelBooking model ){
-            if (model.Id==0)
+        public IActionResult CrestEdite(HotelBooking model)
+        {
+            if (model.Id == 0)
             {
                 _contex.Add(model);
             }
             else
             {
-               var bookingDb = _contex.Bookings.Find(model.Id);
-               if (bookingDb == null)
-               {
-                   return new JsonResult(NotFound());
-               }
-               bookingDb = model;
-               
+                var bookingDb = _contex.Bookings.Find(model.Id);
+                if (bookingDb == null)
+                {
+                    return NotFound();
+                }
+                bookingDb.RoomNumber = model.RoomNumber;
+                bookingDb.ClientName = model.ClientName;
             }
             _contex.SaveChanges();
-            return new JsonResult(model);
-        }  
+            return Ok(model);
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var bookings = _contex.Bookings;
+            return Ok(bookings);
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var bookingDb = _contex.Bookings.Find(id);
+            if (bookingDb == null)
+            {
+                return NotFound();
+            }
+            _contex.Bookings.Remove(bookingDb);
+            _contex.SaveChanges();
+            return Ok();
+        }
     }
 
     
